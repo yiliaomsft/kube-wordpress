@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: wordpress
+spec: 
+  containers: 
+  - name: wordpress
+    image: microsoft/multicontainerwordpress
+    ports: 
+    - containerPort: 80
+  - name: redis 
+    image: redis:alpine
